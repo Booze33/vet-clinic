@@ -1,6 +1,7 @@
 /* Database schema to keep the structure of entire database. */
 CREATE DATABASE vet_clinic;
 USE vet_clinic;
+DROP TABLE IF EXISTS animals;
 CREATE TABLE animals (
   id INT  GENERATED ALWAYS AS IDENTITY,
   name VARCHAR(25) NOT NULL,
@@ -34,4 +35,4 @@ ALTER TABLE animals ADD species_id INT;
 ALTER TABLE animals ADD CONSTRAINT FK_AnimalSpecies FOREIGN KEY (species_id) REFERENCES species(id);
 
 ALTER TABLE animals ADD owner_id INT;
-ALTER TABLE ANIMALS ADD CONSTRAINT FK_Owners FOREIGN KEY (owner_id) REFERENCES owners(id);
+ALTER TABLE animals ADD CONSTRAINT FK_AnimalOwner FOREIGN KEY (owner_id) REFERENCES owners(id);
