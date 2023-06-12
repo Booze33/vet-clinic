@@ -62,3 +62,15 @@ CREATE TABLE visits (
 	FOREIGN KEY (vet_id) REFERENCES vets(id),
 	FOREIGN KEY (animal_id) REFERENCES animals(id)
 )
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+DROP TABLE IF EXISTS visits;
+CREATE TABLE visits(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  animal_id INT REFERENCES animals(id),
+  vet_id INT REFERENCES vets(id),
+  visit_date DATE,
+  PRIMARY KEY(id)
+);
