@@ -2,6 +2,9 @@
 
 ## Getting Started
 
+<h1>Here is an image description of the database</h1>
+<img src=https://github.com/Booze33/vet-clinic/assets/99689722/2ccc5dbd-3c3c-4c27-81a3-d1633473a8d6 >
+
 <a name="readme-top"></a>
 
 <!-- TABLE OF CONTENTS -->
